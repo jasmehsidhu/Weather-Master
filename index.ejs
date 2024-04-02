@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherMaster</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .weather-info {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        h1 {
+            grid-column: span 3;
+            margin-bottom: 20px;
+        }
+
+        .weather-detail {
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="weather-info">
+        <h1>Weather in <%=city%></h1>
+        <div class="weather-detail">
+            <h3>Temperature</h3>
+            <p><%= temp %> C</p>
+        </div>
+        <div class="weather-detail">
+            <h3>Description</h3>
+            <p><%=description %></p>
+        </div>
+        <div class="weather-detail">
+            <h3>Wind Speed</h3>
+            <p><%=speed%> km/s</p>
+        </div>
+    </div>
+</body>
+</html>
